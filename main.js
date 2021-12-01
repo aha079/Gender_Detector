@@ -10,6 +10,25 @@ function check(name) {
     return regex.test(name);
 }
 
+//this function is for remove btn functionality and remove name from local storage if it exist
+document.getElementById('remove_button').onclick = function (e) {
+    var name = document.getElementById('name').value;
+    var gender_saved = document.querySelector('#gender-saved');
+    if (name.length > 1) {
+        var gender = localStorage.getItem(name);
+        if(gender){
+            localStorage.removeItem(name)
+            gender_saved.innerText = 'Nothing in storage'
+
+        } else{
+            err("This name didn't save in the local storage!")
+        }
+    } else{
+        err("you have not enter any name!")
+    }
+    e.preventDefault();
+};
+
 //this function is for submit button functionality and request and get response from api (js object was made)
 document.getElementById('submit_button').onclick = function (e) {
     var form = document.getElementById('main-form');
@@ -83,3 +102,4 @@ document.getElementById('save_button').onclick = function (e) {
 
     e.preventDefault();
 };
+
