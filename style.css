@@ -1,0 +1,94 @@
+/* it is for all sections */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* for bodies we need image at the center no repeat and cover all the web */
+body {
+    display: flex;
+    font-family: sans-serif;
+    background-image: url('download.jpeg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    align-items: center;
+    justify-content: center;
+    
+}
+/* for header1 text should be at the center and color in moron */
+h1 {
+    text-align: center;
+    margin-bottom: 10px;
+    color: #800000;
+}
+/* for paragraph we set margin */
+p{
+    margin: 30px;
+}
+
+/* for container class (the box in the middle) we set gradient and percentage of h and w we set opacity to see image on the behind and border-radious for beautifulness */
+.main_part {
+    height: 50%;
+    width: 45%;
+    padding: 10;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    margin: auto;
+    display: grid;
+    background: linear-gradient(to right, rgb(53, 92, 125), rgb(108, 91, 123), rgb(192, 108, 132));
+    border-radius: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    opacity: 0.8;
+}
+/* our container have 2 item in next to one another item and text should be at the center h and w is 100%*/
+.item {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* if any btn class (any button) is selected with mouse we see purple color*/
+.btn:hover {
+    background-color: purple;
+}
+.sub_item {
+    display: block;
+    margin: 5px;
+}
+/* form-control class is our text input solid border in choosed and border-radious for round edge*/
+.text_part {
+    width: 90%;
+    height: 40px;
+    background: white;
+    margin: 10px 0 18px 0;
+    padding: 0 10px;
+    border-radius: 4px;
+    border: 1px solid silver;
+    
+}
+/* any btn class (any button) blue color specific w and h and no border text color is white and size is 16px and when mouse was gone on the btn we see change shape of mouse to pointer */
+.btn {
+    width: 120px;
+    height: 34px;
+    border: none;
+    outline: none;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    background: #5072a7;
+    cursor: pointer;
+    font-size: 16px;
+    color: white;
+    border-radius: 4px;
+}
+
+
+.radio-style {
+    display: inline-block;
+    margin: 8px;
+
+}
+label {
+    display: block;
+    margin: 3px;
+}

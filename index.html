@@ -1,0 +1,56 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="Male_or_Female" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <link rel="icon" href="gender.png" type="image/icon type">
+        <title>Gender Detector</title>
+    </head>
+    <body>
+            <div class="main_part">
+                <div class="item">
+                    <form id="main-form">
+                        <p style="color: green;margin: auto;" id="status"></p>
+    
+                        <h1>What is your target Name?</h1>
+                        <div class="form-group">
+                            <label for="name">Name: </label>
+                            <input type="text" class="text_part" id="name" name="name" maxlength="255" required />
+                        </div>
+
+                        <div class="radio-style">
+                            <label for="gender1"><input type="radio" id="gender1" name="gender" value="male"/> Male</label>
+                            <label for="gender2"><input type="radio" id="gender2" name="gender" value="female" > Female</label>
+                        </div>
+
+                        <button type="submit" class="btn" id="submit_button">Submit</button>
+                        <button type="submit" class="btn" style="margin-top: 5px;" id="save_button">Save</button>
+                        <p id="Error" style="display: flex;font-weight: bold;justify-content: center;color: red;"></p>
+                    </form>
+                </div>
+
+                <div class="item">
+                    <div class="sub_item">
+                        <div class="sub_item">
+                            <h1>What the api says?</h1>
+                            <p id="gender-status" style="display: flex;justify-content: center;"></p>
+                            <p id="gender-percentage" style="display: flex;justify-content: center;"></p>
+                        </div>
+
+
+                        <div class="sub_item" style="border-style: dotted;border-width: 2px;padding: 5px;">
+                            <h1>Saved Answer</h1>
+                            <p id="gender-saved" style="display: flex;justify-content: center;"></p>
+                        <button type="submit" class="btn" id="remove_button">Remove</button>
+                        </div>
+                    </div>
+                </div>
+
+            
+
+        </div>
+        <script type="text/javascript"  src="main.js" charset="utf-8"></script>
+
+    </body>
+</html>
